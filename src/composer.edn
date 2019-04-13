@@ -1,0 +1,113 @@
+{
+ :sessions {}
+ :users {
+  "UAGNB66nI" {:id "UAGNB66nI", :name "chen", :nickname "chen", :password "d41d8cd98f00b204e9800998ecf8427e", :avatar nil}
+ }
+ :templates {
+  "9GV5LFgN-" {
+   :id "9GV5LFgN-", :name "profile", :mock-pointer "base", :width 400, :height 400, :sort-key "d"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+  "JAnuFZzdk" {
+   :id "JAnuFZzdk", :name "workspace", :mock-pointer "base", :width 400, :height 400, :sort-key "c"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+  "Jp-YEri0-" {
+   :id "Jp-YEri0-", :name "container", :mock-pointer "base", :width 400, :height 400, :sort-key "j"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+  "VVH4ALeuF" {
+   :id "VVH4ALeuF", :name "header", :mock-pointer "base", :width 400, :height 400, :sort-key "r"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+  "l2UpIJhsT" {
+   :id "l2UpIJhsT", :name "status-tip", :mock-pointer "base", :width 400, :height 400, :sort-key "f"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+  "vhTWiVbIA" {
+   :id "vhTWiVbIA", :name "offline", :mock-pointer "base", :width 400, :height 400, :sort-key "H"
+   :mocks {
+    "base" {
+     :id "base", :name "base"
+     :data {}
+    }
+   }
+   :markup {
+    :type :box, :layout :row
+    :props {}
+    :attrs {}
+    :presets #{}
+    :style {}
+    :children {}
+   }
+  }
+ }
+ :settings {
+  :colors {}
+ }
+}
