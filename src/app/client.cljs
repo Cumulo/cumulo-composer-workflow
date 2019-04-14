@@ -19,6 +19,8 @@
 
 (declare simulate-login!)
 
+(def *local-store (atom {:username "", :password ""}))
+
 (defonce *states (atom {}))
 
 (defonce *store (atom nil))
@@ -33,6 +35,8 @@
   (when (and config/dev? (not= op :states)) (println "Dispatch" op op-data))
   (case op
     :states (reset! *states ((mutate op-data) @*states))
+    :local-mutate
+      (swap! *local-store (fn [store] (assoc-in store (:path op-data) (:value op-data))))
     :effect/connect (connect!)
     (ws-send! {:kind :op, :op op, :data op-data})))
 
@@ -57,7 +61,7 @@
 (defn render-app! [renderer]
   (renderer
    mount-target
-   (comp-container @*states @*store (vm/get-view-model @*store) vm/on-action)
+   (comp-container @*states @*store (vm/get-view-model @*store @*local-store) vm/on-action)
    dispatch!))
 
 (def ssr? (some? (.querySelector js/document "meta.respo-ssr")))

@@ -54,7 +54,7 @@
        (get templates "container")
        {:data view-model, :templates templates, :level 1}
        (fn [d! op param options] (on-action d! op param options view-model)))
-      (when dev? (comp-inspect "Store" store {:bottom 0, :left 0, :max-width "100%"}))
+      (when dev? (comp-inspect "vm" view-model {:bottom 0, :left 0, :max-width "100%"}))
       (comp-messages
        (get-in store [:session :messages])
        {}
