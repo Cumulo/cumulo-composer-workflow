@@ -73,6 +73,7 @@
   (connect!)
   (add-watch *store :changes #(render-app! render!))
   (add-watch *states :changes #(render-app! render!))
+  (add-watch *local-store :changes #(render-app! render!))
   (on-page-touch #(if (nil? @*store) (connect!)))
   (println "App started!"))
 
