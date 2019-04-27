@@ -119,6 +119,7 @@
         :presets #{}
         :style {"color" "\"red", "border-color" "\"red"}
         :children {}
+        :event {"click" ":logout"}
        }
       }
      }

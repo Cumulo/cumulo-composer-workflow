@@ -19,7 +19,7 @@
 
 (declare simulate-login!)
 
-(def *local-store (atom {:username "", :password ""}))
+(defonce *local-store (atom {:username "", :password ""}))
 
 (defonce *states (atom {}))
 

@@ -10,11 +10,15 @@
     :local/username (d! :local-mutate {:path [:username], :value (:value options)})
     :local/password (d! :local-mutate {:path [:password], :value (:value options)})
     :signup
-      (let [local (:local view-model)]
-        (d! :user/sign-up [(:username local) (:password local)]))
+      (let [local (:local view-model), pair [(:username local) (:password local)]]
+        (d! :user/sign-up pair)
+        (.setItem js/localStorage (:storage-key config/site) pair))
     :login
-      (let [local (:local view-model)]
-        (d! :user/log-in [(:username local) (:password local)]))
+      (let [local (:local view-model), pair [(:username local) (:password local)]]
+        (d! :user/log-in pair)
+        (.setItem js/localStorage (:storage-key config/site) pair))
+    :logout
+      (do (d! :user/log-out nil) (.removeItem js/localStorage (:storage-key config/site)))
     :profile (d! :router/change {:name :profile})
     :home (d! :router/change {:name :home})
     (do (println "Unknown op:" op))))
