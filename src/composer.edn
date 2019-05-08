@@ -183,16 +183,18 @@
     "base" {
      :id "base", :name "base"
      :data {
-      :logged-in? false, :reel-length 2
-      :session {
-       :user-id nil, :id "6U0sZ9w2Z", :nickname nil
-       :router {:name "home", :data nil, :router nil}
-       :messages {
-        :lpdSih9Map {:id "lpdSih9Map", :text "No user named: chen"}
-       }
-      }
       :local {:username "", :password ""}
       :site {:cdn-url "http://cdn.tiye.me/cumulo-workflow/", :icon "http://cdn.tiye.me/logo/cumulo.png", :port 5021, :title "Cumulo", :upload-folder "tiye.me:repo/Cumulo/workflow/", :theme "#eeeeff", :server-folder "tiye.me:servers/workflow", :cdn-folder "tiye.me:cdn/cumulo-workflow", :storage-key "workflow-storage", :dev-ui "http://localhost:8100/main.css", :release-ui "http://cdn.tiye.me/favored-fonts/main.css", :storage-file "storage.edn"}
+      :store {
+       :logged-in? true, :reel-length 2, :count 1, :color "#f78fb5"
+       :session {
+        :user-id "_rDZdi6bt_", :id "x5AOWaY--", :nickname nil
+        :router {:name :home, :data nil, :router nil}
+        :messages {}
+       }
+       :user {:id "_rDZdi6bt_", :name "chen", :nickname "chen", :avatar nil}
+       :router {:name :home, :data nil, :router nil}
+      }
      }
     }
    }
@@ -284,6 +286,14 @@
           }
          }
         }
+       }
+       "r" {
+        :type :template, :layout nil
+        :props {"name" "\"status-tip", "data" "@:store :color"}
+        :attrs {}
+        :presets #{}
+        :style {}
+        :children {}
        }
       }
      }
@@ -480,7 +490,7 @@
    :mocks {
     "base" {
      :id "base", :name "base"
-     :data {:icon "http://cdn.tiye.me/logo/respo.png"}
+     :data {:icon "http://cdn.tiye.me/logo/cumulo.png"}
     }
    }
    :markup {
