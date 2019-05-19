@@ -401,7 +401,7 @@
         :presets #{}
         :style {}
         :children {}
-        :event {"input" ":local/username"}
+        :event {"input" ":username"}
        }
        "j" {
         :type :space, :layout nil
@@ -418,7 +418,7 @@
         :presets #{}
         :style {}
         :children {}
-        :event {"input" ":local/password"}
+        :event {"input" ":password"}
        }
        "v" {
         :type :space, :layout nil
