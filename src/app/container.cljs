@@ -23,7 +23,8 @@
        session (:session store)
        router (:router store)
        router-data (:data router)
-       templates (extract-templates (read-string (inline "composer.edn")))
+       composer-data (read-string (inline "composer.edn"))
+       templates (extract-templates composer-data)
        view-model (vm/get-view-model store states)]
    (div
     {:style (merge ui/global ui/fullscreen ui/column)}
@@ -37,7 +38,8 @@
       :states states,
       :state-fns (->> vm/states-manager
                       (map (fn [[alias manager]] [alias (:init manager)]))
-                      (into {}))}
+                      (into {})),
+      :presets (get-in composer-data [:settings :presets])}
      (fn [d! op context options]
        (vm/on-action d! op (dissoc context :templates :state-fns) options view-model states)))
     (when dev? (comp-inspect "vm" view-model {:bottom 0, :left 0, :max-width "100%"}))

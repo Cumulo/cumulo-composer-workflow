@@ -145,7 +145,7 @@
       :type :text, :layout nil
       :props {"value" "\"This is workspace"}
       :attrs {}
-      :presets #{:base-padding}
+      :presets #{"J1oMDHcvp"}
       :style {}
       :children {}
      }
@@ -217,7 +217,7 @@
       :type :box, :layout :column
       :props {}
       :attrs {}
-      :presets #{:fullscreen}
+      :presets #{"uHabbXGQ4"}
       :style {}
       :children {
        "T" {
@@ -316,7 +316,7 @@
     :type :box, :layout :row-parted
     :props {}
     :attrs {}
-    :presets #{:base-padding}
+    :presets #{"J1oMDHcvp"}
     :style {"border-bottom" "1px solid #eee"}
     :children {
      "T" {
@@ -384,7 +384,7 @@
     :type :box, :layout :center
     :props {}
     :attrs {}
-    :presets #{:expand}
+    :presets #{"Nqk4Dbg5Y"}
     :style {}
     :children {
      "T" {
@@ -497,7 +497,7 @@
     :type :box, :layout :center
     :props {}
     :attrs {}
-    :presets #{:expand}
+    :presets #{"Nqk4Dbg5Y"}
     :style {}
     :children {
      "T" {
